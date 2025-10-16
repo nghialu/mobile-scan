@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="demo-container">
         <header class="demo-header">
@@ -29,7 +31,7 @@
                                 <i class="fas fa-battery-three-quarters"></i>
                             </div>
                         </div>
-                        
+
                         <div class="app-header">
                             <div class="header-left">
                                 <i class="fas fa-bars"></i>
@@ -87,7 +89,7 @@
                             <div class="scans-list">
                                 <!-- Today -->
                                 <div class="date-divider">Today - Oct 16</div>
-                                
+
                                 <div class="scan-item urgent">
                                     <div class="scan-icon">
                                         <i class="fas fa-exclamation-circle"></i>
@@ -187,7 +189,7 @@
                     </div>
                 </div>
                 <div class="step-label">Step 0: Dashboard</div>
-                
+
                 <!-- Explanation Panel -->
                 <div class="explanation-panel">
                     <h4><i class="fas fa-info-circle"></i> Screen Explanation</h4>
@@ -195,22 +197,22 @@
                         <div class="explain-item">
                             <strong>📊 Statistics Cards:</strong>
                             <ul>
-                                <li><strong>Letters Today:</strong> Tổng số bì thư (letters/envelopes) được scan trong ngày hiện tại</li>
+                                <li><strong>Letters Today:</strong> Tổng số bì thư (letters/envelopes) được scan trong
+                                    ngày hiện tại</li>
                                 <li><strong>This Week:</strong> Tổng số bì thư đã xử lý trong 7 ngày qua</li>
-                                <li><strong>Pending:</strong> Số bì thư đang chờ confirm match trước khi push lên CRM</li>
+                                <li><strong>Pending:</strong> Số bì thư đang chờ confirm match trước khi push lên CRM
+                                </li>
                             </ul>
                         </div>
                         <div class="explain-item">
                             <strong>📋 Status Types:</strong>
                             <ul>
-                                <li><strong>⏰ Pending:</strong> Bì thư đã scan & AI đã match, chờ user confirm để push CRM</li>
+                                <li><strong>⏰ Pending:</strong> Bì thư đã scan & AI đã match, chờ user confirm để push
+                                    CRM</li>
                                 <li><strong>✅ Completed:</strong> Đã confirm & push data lên CRM thành công</li>
                             </ul>
                         </div>
-                        <div class="explain-item">
-                            <strong>🚨 Urgent Items:</strong>
-                            <p>Bì thư có border đỏ = được AI phát hiện là thư quan trọng (từ Ministry, Tax Office, Legal documents...)</p>
-                        </div>
+
                         <div class="explain-item">
                             <strong>🔍 Filter Options:</strong>
                             <ul>
@@ -236,7 +238,7 @@
                                 <i class="fas fa-battery-three-quarters"></i>
                             </div>
                         </div>
-                        
+
                         <div class="app-header">
                             <div class="header-left">
                                 <i class="fas fa-bars"></i>
@@ -247,92 +249,105 @@
                             </div>
                         </div>
 
-                        <div class="screen-content scan-screen">
-                            <div class="camera-container">
-                                <div class="camera-overlay">
-                                    <div class="scan-frame">
+                        <div class="screen-content scan-screen camera-viewfinder">
+                            <!-- Camera Viewfinder Background -->
+                            <div class="viewfinder-frame">
+                                <!-- Top Camera Controls -->
+                                <div class="camera-top-controls">
+                                    <button class="camera-control-btn">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                    <div class="camera-modes">
+                                        <!-- <span>Document</span>
+                                        <span>Book</span>
+                                        <span>ID Card</span> -->
+                                        <span class="active">Photo</span>
+                                    </div>
+                                    <button class="camera-control-btn">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Camera Preview Area (ảnh demo envelope) -->
+                                <div class="camera-preview">
+                                    <div class="scan-guide-frame">
                                         <div class="corner top-left"></div>
                                         <div class="corner top-right"></div>
                                         <div class="corner bottom-left"></div>
                                         <div class="corner bottom-right"></div>
-                                        <div class="scan-line"></div>
-                                    </div>
-                                    <div class="envelope-preview">
-                                        <div class="envelope-content">
-                                            <div class="address-block">
-                                                <strong>ABC Corporation Ltd.</strong><br>
-                                                123 Business St.<br>
-                                                Singapore 123456
-                                            </div>
-                                        </div>
+                                        <div class="guide-text">Align envelope within frame</div>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <div class="scan-tools">
-                                <div class="tool-item">
-                                    <i class="fas fa-flash"></i>
-                                    <span>Flash</span>
-                                </div>
-                                <div class="tool-item">
-                                    <i class="fas fa-crop"></i>
-                                    <span>Auto Crop</span>
-                                </div>
-                                <div class="tool-item active">
-                                    <i class="fas fa-language"></i>
-                                    <span>Multi Lang</span>
-                                </div>
-                            </div>
 
-                            <div class="scan-actions">
-                                <div class="gallery-btn">
-                                    <i class="fas fa-images"></i>
-                                </div>
-                                <div class="capture-btn">
-                                    <div class="capture-inner"></div>
-                                </div>
-                                <div class="batch-btn">
-                                    <i class="fas fa-layer-group"></i>
-                                    <span class="badge">3</span>
-                                </div>
-                            </div>
+                                <!-- Bottom Camera Controls -->
+                                <div class="camera-bottom-controls">
+                                    <!-- Gallery Button (góc trái) -->
+                                    <button class="gallery-btn">
+                                        <i class="fas fa-images"></i>
+                                        <span>Gallery</span>
+                                    </button>
 
-                            <div class="tips">
-                                <i class="fas fa-lightbulb"></i>
-                                <span>Tip: Giữ camera thẳng với bì thư (envelope) để có kết quả tốt nhất</span>
+                                    <!-- Capture Button (giữa) -->
+                                    <button class="capture-btn">
+                                        <div class="capture-inner"></div>
+                                    </button>
+
+                                    <!-- Retake Button (góc phải) -->
+                                    <button class="retake-btn">
+                                        <i class="fas fa-redo"></i>
+                                        <span>Retake Picture</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="step-label">Step 1: Scan Envelope</div>
-                
+
                 <!-- Explanation Panel -->
                 <div class="explanation-panel">
                     <h4><i class="fas fa-info-circle"></i> Screen Explanation</h4>
                     <div class="explanation-content">
                         <div class="explain-item">
-                            <strong>📸 Scan Frame:</strong>
-                            <p>Khung xanh neon = vùng AI sẽ detect. Đặt BÌ THƯ (envelope) trong khung này để có kết quả tốt nhất.</p>
+                            <strong>📸 Scan Envelope:</strong>
+                            <p>User chọn nguồn ảnh (camera hoặc gallery) để bắt đầu quét bì thư. App sử dụng native
+                                camera của hệ điều hành để chất lượng tốt nhất.</p>
                         </div>
                         <div class="explain-item">
-                            <strong>🛠️ Tools:</strong>
+                            <strong>📷 Source Options:</strong>
                             <ul>
-                                <li><strong>Flash:</strong> Bật đèn flash khi scan trong môi trường tối</li>
-                                <li><strong>Auto Crop:</strong> Tự động cắt & xoay bì thư cho thẳng</li>
-                                <li><strong>Multi Lang:</strong> Hỗ trợ OCR đa ngôn ngữ (English, Chinese, Malay...)</li>
+                                <li><strong>Take Photo (Recommended):</strong> Mở camera mặc định để chụp ảnh mới - đảm
+                                    bảo chất lượng tốt nhất</li>
+                                <li><strong>Choose from Gallery:</strong> Chọn ảnh có sẵn từ thư viện - hữu ích khi đã
+                                    chụp trước</li>
                             </ul>
                         </div>
                         <div class="explain-item">
-                            <strong>🎯 Capture Actions:</strong>
+                            <strong>🤖 Automatic Processing:</strong>
+                            <p>Sau khi chụp/chọn ảnh, AI sẽ tự động xử lý trong background (Step 2):</p>
                             <ul>
-                                <li><strong>Gallery (trái):</strong> Chọn ảnh bì thư có sẵn từ thư viện</li>
-                                <li><strong>Capture (giữa):</strong> Chụp ảnh bì thư mới</li>
-                                <li><strong>Batch (phải):</strong> Chế độ quét hàng loạt bì thư (số badge = số bì thư đang xử lý)</li>
+                                <li>✅ Auto crop & rotate ảnh</li>
+                                <li>✅ Enhance quality (brightness, contrast)</li>
+                                <li>✅ Multi-language OCR để extract text</li>
                             </ul>
+                            <p><em>User không cần phải chỉnh setting gì, mọi thứ được xử lý tự động.</em></p>
                         </div>
                         <div class="explain-item">
-                            <strong>💡 Best Practices:</strong>
-                            <p>• Giữ camera song song với bì thư<br>• Đảm bảo đủ ánh sáng<br>• Tránh bóng che & phản quang<br>• Làm phẳng bì thư trước khi scan</p>
+                            <strong>🔧 Technical Implementation:</strong>
+                            <p><strong>Android:</strong> <code>Intent.ACTION_IMAGE_CAPTURE</code><br>
+                                <strong>iOS:</strong> <code>UIImagePickerController</code> với sourceType = .camera<br>
+                                <strong>React Native:</strong> <code>react-native-image-picker</code> hoặc
+                                <code>expo-camera</code>
+                            </p>
+                        </div>
+                        <div class="explain-item">
+                            <strong>💡 Advantages:</strong>
+                            <ul>
+                                <li>✅ Simple UX - chỉ cần chọn source và chụp</li>
+                                <li>✅ Không cần camera permission phức tạp</li>
+                                <li>✅ Tận dụng native camera features (HDR, Night mode...)</li>
+                                <li>✅ AI xử lý tự động, không làm phiền user</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -351,7 +366,7 @@
                                 <i class="fas fa-battery-three-quarters"></i>
                             </div>
                         </div>
-                        
+
                         <div class="app-header">
                             <div class="header-left">
                                 <i class="fas fa-arrow-left"></i>
@@ -364,7 +379,8 @@
 
                         <div class="screen-content processing-screen">
                             <div class="processing-image">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Crect fill='%23f0f0f0' width='200' height='120'/%3E%3Ctext x='100' y='60' text-anchor='middle' fill='%23999' font-family='Arial' font-size='12'%3EScanned Envelope%3C/text%3E%3C/svg%3E" alt="Scanned envelope">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Crect fill='%23f0f0f0' width='200' height='120'/%3E%3Ctext x='100' y='60' text-anchor='middle' fill='%23999' font-family='Arial' font-size='12'%3EScanned Envelope%3C/text%3E%3C/svg%3E"
+                                    alt="Scanned envelope">
                                 <div class="processing-overlay">
                                     <div class="ai-detection">
                                         <div class="detection-box receiver">
@@ -431,7 +447,7 @@
                     </div>
                 </div>
                 <div class="step-label">Step 2: AI Processing</div>
-                
+
                 <!-- Explanation Panel -->
                 <div class="explanation-panel">
                     <h4><i class="fas fa-info-circle"></i> Screen Explanation</h4>
@@ -439,8 +455,10 @@
                         <div class="explain-item">
                             <strong>🎯 Detection Boxes:</strong>
                             <ul>
-                                <li><strong>Receiver (xanh):</strong> AI detect tên công ty nhận thư (vị trí giữa bì thư)</li>
-                                <li><strong>Sender (xanh):</strong> AI detect tên người/tổ chức gửi (góc trên phải bì thư)</li>
+                                <li><strong>Receiver (xanh):</strong> AI detect tên công ty nhận thư (vị trí giữa bì
+                                    thư)</li>
+                                <li><strong>Sender (xanh):</strong> AI detect tên người/tổ chức gửi (góc trên phải bì
+                                    thư)</li>
                                 <li><strong>Date (xanh):</strong> AI detect ngày tháng trên tem/postmark của bì thư</li>
                             </ul>
                         </div>
@@ -456,12 +474,13 @@
                             <strong>📊 Processing Stats:</strong>
                             <ul>
                                 <li><strong>Accuracy:</strong> Độ chính xác OCR (95-99% = tốt)</li>
-                                <li><strong>Speed:</strong> Thời gian xử lý (< 3s = fast)</li>
+                                <li><strong>Speed:</strong> Thời gian xử lý (< 3s=fast)</li>
                             </ul>
                         </div>
                         <div class="explain-item">
                             <strong>ℹ️ Extracted Data:</strong>
-                            <p>Thông tin được AI trích xuất từ bì thư (envelope), sẽ dùng để match với database companies.</p>
+                            <p>Thông tin được AI trích xuất từ bì thư (envelope), sẽ dùng để match với database
+                                companies.</p>
                         </div>
                     </div>
                 </div>
@@ -480,7 +499,7 @@
                                 <i class="fas fa-battery-three-quarters"></i>
                             </div>
                         </div>
-                        
+
                         <div class="app-header">
                             <div class="header-left">
                                 <i class="fas fa-arrow-left"></i>
@@ -516,7 +535,7 @@
                                         <i class="fas fa-flag"></i>
                                     </div>
                                 </div>
-                                
+
                                 <div class="company-details">
                                     <div class="detail-row">
                                         <i class="fas fa-map-marker-alt"></i>
@@ -564,7 +583,7 @@
                     </div>
                 </div>
                 <div class="step-label">Step 3: Match Results</div>
-                
+
                 <!-- Explanation Panel -->
                 <div class="explanation-panel">
                     <h4><i class="fas fa-info-circle"></i> Screen Explanation</h4>
@@ -580,7 +599,8 @@
                         </div>
                         <div class="explain-item scenario-box partial">
                             <strong>🔍 PARTIAL MATCH (80-99%):</strong>
-                            <p><strong>Điều kiện:</strong> Text OCR giống 1 phần với nhiều công ty (ví dụ: "ABC Corp", "ABC Holdings", "ABC Ltd")</p>
+                            <p><strong>Điều kiện:</strong> Text OCR giống 1 phần với nhiều công ty (ví dụ: "ABC Corp",
+                                "ABC Holdings", "ABC Ltd")</p>
                             <p><strong>Hiển thị:</strong> List nhiều companies với % match score</p>
                             <p><strong>Actions:</strong> User chọn đúng company từ list</p>
                         </div>
@@ -600,7 +620,7 @@
                         </div>
                         <div class="explain-item">
                             <strong>🔄 Confidence Badge:</strong>
-                            <p>% = độ chính xác của AI matching. 100% = chắc chắn, < 80% = cần verify</p>
+                            <p>% = độ chính xác của AI matching. 100% = chắc chắn, < 80%=cần verify</p>
                         </div>
                     </div>
                 </div>
@@ -619,8 +639,8 @@
                                 <i class="fas fa-battery-three-quarters"></i>
                             </div>
                         </div>
-                        
-                            <div class="app-header">
+
+                        <div class="app-header">
                             <div class="header-left">
                                 <i class="fas fa-arrow-left"></i>
                             </div>
@@ -628,7 +648,8 @@
                             <div class="header-right">
                                 <i class="fas fa-share"></i>
                             </div>
-                        </div>                        <div class="screen-content action-screen">
+                        </div>
+                        <div class="screen-content action-screen">
                             <div class="success-message">
                                 <div class="success-icon">
                                     <i class="fas fa-check-circle"></i>
@@ -642,7 +663,7 @@
                                     <i class="fas fa-database"></i>
                                     <h3>CRM Record Details</h3>
                                 </div>
-                                
+
                                 <div class="crm-preview">
                                     <div class="crm-field">
                                         <label>Company:</label>
@@ -679,7 +700,8 @@
 
                                 <div class="crm-actions-note">
                                     <i class="fas fa-info-circle"></i>
-                                    <p>Record has been saved to CRM. Client notification and mail forwarding will be handled separately through CRM workflow.</p>
+                                    <p>Record has been saved to CRM. Client notification and mail forwarding will be
+                                        handled separately through CRM workflow.</p>
                                 </div>
                             </div>
 
@@ -741,14 +763,15 @@
                     </div>
                 </div>
                 <div class="step-label">Step 4: CRM Sync Complete</div>
-                
+
                 <!-- Explanation Panel -->
                 <div class="explanation-panel">
                     <h4><i class="fas fa-info-circle"></i> Screen Explanation</h4>
                     <div class="explanation-content">
                         <div class="explain-item">
                             <strong>✅ Success Message:</strong>
-                            <p>Xác nhận data đã được push lên CRM system thành công. Lúc này record đã tồn tại trong CRM.</p>
+                            <p>Xác nhận data đã được push lên CRM system thành công. Lúc này record đã tồn tại trong
+                                CRM.</p>
                         </div>
                         <div class="explain-item">
                             <strong>📋 CRM Record Fields:</strong>
@@ -758,27 +781,32 @@
                                 <li><strong>Letter Sender:</strong> Người/tổ chức gửi thư</li>
                                 <li><strong>Received Date:</strong> Ngày nhận thư (từ OCR hoặc scan date)</li>
                                 <li><strong>Scanned By:</strong> Người thực hiện scan (Auto = app)</li>
-                                <li><strong>CRM Record ID:</strong> Mã unique của record trong CRM (#ML-YYYY-MM-XXXX)</li>
+                                <li><strong>CRM Record ID:</strong> Mã unique của record trong CRM (#ML-YYYY-MM-XXXX)
+                                </li>
                                 <li><strong>Sync Status:</strong> Thời gian sync thành công</li>
                             </ul>
                         </div>
                         <div class="explain-item">
                             <strong>⚙️ Additional Options:</strong>
                             <ul>
-                                <li><strong>Attach Scan Image:</strong> Upload ảnh bì thư (envelope) gốc lên CRM record</li>
-                                <li><strong>Archive Locally:</strong> Lưu copy ảnh bì thư trong app để offline access</li>
+                                <li><strong>Attach Scan Image:</strong> Upload ảnh bì thư (envelope) gốc lên CRM record
+                                </li>
+                                <li><strong>Archive Locally:</strong> Lưu copy ảnh bì thư trong app để offline access
+                                </li>
                                 <li><strong>Mark as Urgent:</strong> Flag record này là priority trong CRM</li>
                             </ul>
                         </div>
                         <div class="explain-item">
                             <strong>💡 Important Note:</strong>
-                            <p>Email notification & letter forwarding sẽ được xử lý riêng thông qua CRM workflow (không phải trong app này). CorpSec staff sẽ handle từ CRM interface.</p>
+                            <p>Email notification & letter forwarding sẽ được xử lý riêng thông qua CRM workflow (không
+                                phải trong app này). CorpSec staff sẽ handle từ CRM interface.</p>
                         </div>
                         <div class="explain-item">
                             <strong>🎯 Next Actions:</strong>
                             <ul>
                                 <li><strong>Edit Details:</strong> Sửa thông tin nếu phát hiện sai sót</li>
-                                <li><strong>Complete & Next:</strong> Hoàn thành & quay về dashboard để scan bì thư tiếp theo</li>
+                                <li><strong>Complete & Next:</strong> Hoàn thành & quay về dashboard để scan bì thư tiếp
+                                    theo</li>
                             </ul>
                         </div>
                     </div>
@@ -834,4 +862,5 @@
 
     <script src="/script.js"></script>
 </body>
+
 </html>
