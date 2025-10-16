@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorpSec Mail Scanner - Mobile App Demo</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="demo-container">
+        <header class="demo-header">
+            <h1>CorpSec Mail Scanner</h1>
+            <p>Mobile App Interface Demo - Mail Processing Workflow</p>
+        </header>
+
+        <div class="phones-container">
+            <!-- Phone 0: Dashboard/History Screen -->
+            <div class="phone-mockup" data-step="0">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar">
+                            <span class="time">09:40</span>
+                            <div class="status-icons">
+                                <i class="fas fa-signal"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-battery-three-quarters"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="app-header">
+                            <div class="header-left">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <h2>Dashboard</h2>
+                            <div class="header-right">
+                                <i class="fas fa-bell"></i>
+                                <span class="notification-badge">5</span>
+                            </div>
+                        </div>
+
+                        <div class="screen-content dashboard-screen">
+                            <!-- Statistics Cards -->
+                            <div class="stats-cards">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-envelope-open"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h4>24</h4>
+                                        <p>Letters Today</p>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h4>156</h4>
+                                        <p>This Week</p>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h4>8</h4>
+                                        <p>Pending</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Recent Scans Section -->
+                            <div class="section-header-dash">
+                                <h3>Recent Scans (7 Days)</h3>
+                                <div class="filter-tabs">
+                                    <button class="filter-tab active">All</button>
+                                    <button class="filter-tab">Pending</button>
+                                    <button class="filter-tab">Completed</button>
+                                </div>
+                            </div>
+
+                            <!-- Scan Items List -->
+                            <div class="scans-list">
+                                <!-- Today -->
+                                <div class="date-divider">Today - Oct 16</div>
+                                
+                                <div class="scan-item urgent">
+                                    <div class="scan-icon">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div class="scan-details">
+                                        <h4>Ministry of Finance</h4>
+                                        <p>ABC Corporation Ltd.</p>
+                                        <span class="time-stamp">09:23 AM</span>
+                                    </div>
+                                    <div class="scan-status pending">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                </div>
+
+                                <div class="scan-item">
+                                    <div class="scan-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="scan-details">
+                                        <h4>IRAS</h4>
+                                        <p>XYZ Trading Pte Ltd.</p>
+                                        <span class="time-stamp">08:45 AM</span>
+                                    </div>
+                                    <div class="scan-status sent">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+
+                                <div class="scan-item">
+                                    <div class="scan-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="scan-details">
+                                        <h4>ACRA</h4>
+                                        <p>Tech Solutions Ltd.</p>
+                                        <span class="time-stamp">07:15 AM</span>
+                                    </div>
+                                    <div class="scan-status completed">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Yesterday -->
+                                <div class="date-divider">Yesterday - Oct 15</div>
+
+                                <div class="scan-item">
+                                    <div class="scan-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="scan-details">
+                                        <h4>CPF Board</h4>
+                                        <p>ABC Corporation Ltd.</p>
+                                        <span class="time-stamp">05:30 PM</span>
+                                    </div>
+                                    <div class="scan-status completed">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+
+                                <div class="scan-item">
+                                    <div class="scan-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="scan-details">
+                                        <h4>MOM</h4>
+                                        <p>Global Services Co.</p>
+                                        <span class="time-stamp">03:20 PM</span>
+                                    </div>
+                                    <div class="scan-status completed">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Oct 14 -->
+                                <div class="date-divider">Oct 14</div>
+
+                                <div class="scan-item">
+                                    <div class="scan-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="scan-details">
+                                        <h4>Bank of Singapore</h4>
+                                        <p>Investment Holdings Ltd.</p>
+                                        <span class="time-stamp">11:45 AM</span>
+                                    </div>
+                                    <div class="scan-status completed">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Action Button -->
+                            <div class="fab">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-label">Step 0: Dashboard</div>
+                
+                <!-- Explanation Panel -->
+                <div class="explanation-panel">
+                    <h4><i class="fas fa-info-circle"></i> Screen Explanation</h4>
+                    <div class="explanation-content">
+                        <div class="explain-item">
+                            <strong>📊 Statistics Cards:</strong>
+                            <ul>
+                                <li><strong>Letters Today:</strong> Tổng số bì thư (letters/envelopes) được scan trong ngày hiện tại</li>
+                                <li><strong>This Week:</strong> Tổng số bì thư đã xử lý trong 7 ngày qua</li>
+                                <li><strong>Pending:</strong> Số bì thư đang chờ confirm match trước khi push lên CRM</li>
+                            </ul>
+                        </div>
+                        <div class="explain-item">
+                            <strong>📋 Status Types:</strong>
+                            <ul>
+                                <li><strong>⏰ Pending:</strong> Bì thư đã scan & AI đã match, chờ user confirm để push CRM</li>
+                                <li><strong>✅ Completed:</strong> Đã confirm & push data lên CRM thành công</li>
+                            </ul>
+                        </div>
+                        <div class="explain-item">
+                            <strong>🚨 Urgent Items:</strong>
+                            <p>Bì thư có border đỏ = được AI phát hiện là thư quan trọng (từ Ministry, Tax Office, Legal documents...)</p>
+                        </div>
+                        <div class="explain-item">
+                            <strong>🔍 Filter Options:</strong>
+                            <ul>
+                                <li><strong>All:</strong> Hiển thị tất cả bì thư trong 7 ngày</li>
+                                <li><strong>Pending:</strong> Chỉ hiện bì thư chờ xử lý</li>
+                                <li><strong>Completed:</strong> Chỉ hiện bì thư đã hoàn thành</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone 1: Scan Screen -->
+            <div class="phone-mockup" data-step="1">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar">
+                            <span class="time">09:41</span>
+                            <div class="status-icons">
+                                <i class="fas fa-signal"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-battery-three-quarters"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="app-header">
+                            <div class="header-left">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <h2>Envelope Scanner</h2>
+                            <div class="header-right">
+                                <i class="fas fa-history"></i>
+                            </div>
+                        </div>
+
+                        <div class="screen-content scan-screen">
+                            <div class="camera-container">
+                                <div class="camera-overlay">
+                                    <div class="scan-frame">
+                                        <div class="corner top-left"></div>
+                                        <div class="corner top-right"></div>
+                                        <div class="corner bottom-left"></div>
+                                        <div class="corner bottom-right"></div>
+                                        <div class="scan-line"></div>
+                                    </div>
+                                    <div class="envelope-preview">
+                                        <div class="envelope-content">
+                                            <div class="address-block">
+                                                <strong>ABC Corporation Ltd.</strong><br>
+                                                123 Business St.<br>
+                                                Singapore 123456
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="scan-tools">
+                                <div class="tool-item">
+                                    <i class="fas fa-flash"></i>
+                                    <span>Flash</span>
+                                </div>
+                                <div class="tool-item">
+                                    <i class="fas fa-crop"></i>
+                                    <span>Auto Crop</span>
+                                </div>
+                                <div class="tool-item active">
+                                    <i class="fas fa-language"></i>
+                                    <span>Multi Lang</span>
+                                </div>
+                            </div>
+
+                            <div class="scan-actions">
+                                <div class="gallery-btn">
+                                    <i class="fas fa-images"></i>
+                                </div>
+                                <div class="capture-btn">
+                                    <div class="capture-inner"></div>
+                                </div>
+                                <div class="batch-btn">
+                                    <i class="fas fa-layer-group"></i>
+                                    <span class="badge">3</span>
+                                </div>
+                            </div>
+
+                            <div class="tips">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Tip: Giữ camera thẳng với bì thư (envelope) để có kết quả tốt nhất</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-label">Step 1: Scan Envelope</div>
+                
+                <!-- Explanation Panel -->
+                <div class="explanation-panel">
+                    <h4><i class="fas fa-info-circle"></i> Screen Explanation</h4>
+                    <div class="explanation-content">
+                        <div class="explain-item">
+                            <strong>📸 Scan Frame:</strong>
+                            <p>Khung xanh neon = vùng AI sẽ detect. Đặt BÌ THƯ (envelope) trong khung này để có kết quả tốt nhất.</p>
+                        </div>
+                        <div class="explain-item">
+                            <strong>🛠️ Tools:</strong>
+                            <ul>
+                                <li><strong>Flash:</strong> Bật đèn flash khi scan trong môi trường tối</li>
+                                <li><strong>Auto Crop:</strong> Tự động cắt & xoay bì thư cho thẳng</li>
+                                <li><strong>Multi Lang:</strong> Hỗ trợ OCR đa ngôn ngữ (English, Chinese, Malay...)</li>
+                            </ul>
+                        </div>
+                        <div class="explain-item">
+                            <strong>🎯 Capture Actions:</strong>
+                            <ul>
+                                <li><strong>Gallery (trái):</strong> Chọn ảnh bì thư có sẵn từ thư viện</li>
+                                <li><strong>Capture (giữa):</strong> Chụp ảnh bì thư mới</li>
+                                <li><strong>Batch (phải):</strong> Chế độ quét hàng loạt bì thư (số badge = số bì thư đang xử lý)</li>
+                            </ul>
+                        </div>
+                        <div class="explain-item">
+                            <strong>💡 Best Practices:</strong>
+                            <p>• Giữ camera song song với bì thư<br>• Đảm bảo đủ ánh sáng<br>• Tránh bóng che & phản quang<br>• Làm phẳng bì thư trước khi scan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone 2: Processing Screen -->
+            <div class="phone-mockup" data-step="2">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar">
+                            <span class="time">09:42</span>
+                            <div class="status-icons">
+                                <i class="fas fa-signal"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-battery-three-quarters"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="app-header">
+                            <div class="header-left">
+                                <i class="fas fa-arrow-left"></i>
+                            </div>
+                            <h2>Processing</h2>
+                            <div class="header-right">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                        </div>
+
+                        <div class="screen-content processing-screen">
+                            <div class="processing-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Crect fill='%23f0f0f0' width='200' height='120'/%3E%3Ctext x='100' y='60' text-anchor='middle' fill='%23999' font-family='Arial' font-size='12'%3EScanned Envelope%3C/text%3E%3C/svg%3E" alt="Scanned envelope">
+                                <div class="processing-overlay">
+                                    <div class="ai-detection">
+                                        <div class="detection-box receiver">
+                                            <span class="label">Receiver</span>
+                                        </div>
+                                        <div class="detection-box sender">
+                                            <span class="label">Sender</span>
+                                        </div>
+                                        <div class="detection-box timestamp">
+                                            <span class="label">Date</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ai-progress">
+                                <div class="progress-header">
+                                    <i class="fas fa-robot"></i>
+                                    <span>AI Analysis in Progress</span>
+                                </div>
+                                <div class="progress-steps">
+                                    <div class="step completed">
+                                        <i class="fas fa-check"></i>
+                                        <span>OCR Text Extraction</span>
+                                    </div>
+                                    <div class="step active">
+                                        <div class="spinner"></div>
+                                        <span>Database Matching</span>
+                                    </div>
+                                    <div class="step">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Result Generation</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="extracted-data">
+                                <h3>Extracted Information</h3>
+                                <div class="data-item">
+                                    <label>Receiver:</label>
+                                    <span>ABC Corporation Ltd.</span>
+                                </div>
+                                <div class="data-item">
+                                    <label>Sender:</label>
+                                    <span>Ministry of Finance</span>
+                                </div>
+                                <div class="data-item">
+                                    <label>Timestamp:</label>
+                                    <span>15/10/2025</span>
+                                </div>
+                            </div>
+
+                            <div class="processing-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>98% Accuracy</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>2.3s</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-label">Step 2: AI Processing</div>
+                
+                <!-- Explanation Panel -->
+                <div class="explanation-panel">
+                    <h4><i class="fas fa-info-circle"></i> Screen Explanation</h4>
+                    <div class="explanation-content">
+                        <div class="explain-item">
+                            <strong>🎯 Detection Boxes:</strong>
+                            <ul>
+                                <li><strong>Receiver (xanh):</strong> AI detect tên công ty nhận thư (vị trí giữa bì thư)</li>
+                                <li><strong>Sender (xanh):</strong> AI detect tên người/tổ chức gửi (góc trên phải bì thư)</li>
+                                <li><strong>Date (xanh):</strong> AI detect ngày tháng trên tem/postmark của bì thư</li>
+                            </ul>
+                        </div>
+                        <div class="explain-item">
+                            <strong>🤖 AI Process Steps:</strong>
+                            <ul>
+                                <li><strong>1. OCR Text Extraction:</strong> Convert ảnh → text bằng AI OCR</li>
+                                <li><strong>2. Database Matching:</strong> So khớp text với database companies</li>
+                                <li><strong>3. Result Generation:</strong> Tạo kết quả với confidence score</li>
+                            </ul>
+                        </div>
+                        <div class="explain-item">
+                            <strong>📊 Processing Stats:</strong>
+                            <ul>
+                                <li><strong>Accuracy:</strong> Độ chính xác OCR (95-99% = tốt)</li>
+                                <li><strong>Speed:</strong> Thời gian xử lý (< 3s = fast)</li>
+                            </ul>
+                        </div>
+                        <div class="explain-item">
+                            <strong>ℹ️ Extracted Data:</strong>
+                            <p>Thông tin được AI trích xuất từ bì thư (envelope), sẽ dùng để match với database companies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone 3: Results Screen -->
+            <div class="phone-mockup" data-step="3">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar">
+                            <span class="time">09:43</span>
+                            <div class="status-icons">
+                                <i class="fas fa-signal"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-battery-three-quarters"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="app-header">
+                            <div class="header-left">
+                                <i class="fas fa-arrow-left"></i>
+                            </div>
+                            <h2>Match Results</h2>
+                            <div class="header-right">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                        </div>
+
+                        <div class="screen-content results-screen">
+                            <div class="match-status exact-match">
+                                <div class="status-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="status-text">
+                                    <h3>Exact Match Found</h3>
+                                    <p>100% database match</p>
+                                </div>
+                                <div class="confidence-badge">100%</div>
+                            </div>
+
+                            <div class="company-card">
+                                <div class="company-header">
+                                    <div class="company-logo">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <div class="company-info">
+                                        <h3>ABC Corporation Ltd.</h3>
+                                        <p>Registration: 201234567X</p>
+                                    </div>
+                                    <div class="priority-flag high">
+                                        <i class="fas fa-flag"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="company-details">
+                                    <div class="detail-row">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>123 Business Street, Singapore 123456</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <i class="fas fa-user"></i>
+                                        <span>Contact: John Doe (Director)</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>john.doe@abccorp.com</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>Last mail: 10/10/2025</span>
+                                    </div>
+                                </div>
+
+                                <div class="tags">
+                                    <span class="tag active">Active Client</span>
+                                    <span class="tag premium">Premium</span>
+                                    <span class="tag priority">High Priority</span>
+                                </div>
+                            </div>
+
+                            <div class="action-buttons">
+                                <button class="btn btn-confirm">
+                                    <i class="fas fa-check"></i>
+                                    Confirm Match
+                                </button>
+                                <button class="btn btn-manual">
+                                    <i class="fas fa-edit"></i>
+                                    Manual Select
+                                </button>
+                            </div>
+
+                            <!-- Alternative scenarios (hidden by default) -->
+                            <div class="scenario-tabs">
+                                <button class="tab active" data-scenario="exact">Exact</button>
+                                <button class="tab" data-scenario="partial">Partial</button>
+                                <button class="tab" data-scenario="none">No Match</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-label">Step 3: Match Results</div>
+                
+                <!-- Explanation Panel -->
+                <div class="explanation-panel">
+                    <h4><i class="fas fa-info-circle"></i> Screen Explanation</h4>
+                    <div class="explanation-content">
+                        <div class="explain-item">
+                            <strong>🎯 Match Types (3 scenarios):</strong>
+                        </div>
+                        <div class="explain-item scenario-box exact">
+                            <strong>✅ EXACT MATCH (100%):</strong>
+                            <p><strong>Điều kiện:</strong> Text OCR khớp 100% với tên công ty trong database</p>
+                            <p><strong>Hiển thị:</strong> Thông tin chi tiết 1 công ty duy nhất</p>
+                            <p><strong>Actions:</strong> "Confirm Match" để push CRM ngay</p>
+                        </div>
+                        <div class="explain-item scenario-box partial">
+                            <strong>🔍 PARTIAL MATCH (80-99%):</strong>
+                            <p><strong>Điều kiện:</strong> Text OCR giống 1 phần với nhiều công ty (ví dụ: "ABC Corp", "ABC Holdings", "ABC Ltd")</p>
+                            <p><strong>Hiển thị:</strong> List nhiều companies với % match score</p>
+                            <p><strong>Actions:</strong> User chọn đúng company từ list</p>
+                        </div>
+                        <div class="explain-item scenario-box none">
+                            <strong>❌ NO MATCH (0%):</strong>
+                            <p><strong>Điều kiện:</strong> Text OCR không khớp với bất kỳ company nào trong database</p>
+                            <p><strong>Hiển thị:</strong> Search box để manual search</p>
+                            <p><strong>Actions:</strong> User tự search & select company</p>
+                        </div>
+                        <div class="explain-item">
+                            <strong>🏷️ Company Tags:</strong>
+                            <ul>
+                                <li><strong>Active Client:</strong> Khách hàng đang hoạt động</li>
+                                <li><strong>Premium:</strong> Gói dịch vụ cao cấp</li>
+                                <li><strong>High Priority:</strong> Ưu tiên xử lý nhanh</li>
+                            </ul>
+                        </div>
+                        <div class="explain-item">
+                            <strong>🔄 Confidence Badge:</strong>
+                            <p>% = độ chính xác của AI matching. 100% = chắc chắn, < 80% = cần verify</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone 4: Action Screen -->
+            <div class="phone-mockup" data-step="4">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar">
+                            <span class="time">09:44</span>
+                            <div class="status-icons">
+                                <i class="fas fa-signal"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-battery-three-quarters"></i>
+                            </div>
+                        </div>
+                        
+                            <div class="app-header">
+                            <div class="header-left">
+                                <i class="fas fa-arrow-left"></i>
+                            </div>
+                            <h2>CRM Sync</h2>
+                            <div class="header-right">
+                                <i class="fas fa-share"></i>
+                            </div>
+                        </div>                        <div class="screen-content action-screen">
+                            <div class="success-message">
+                                <div class="success-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3>Data Pushed to CRM</h3>
+                                <p>Mail information successfully synced</p>
+                            </div>
+
+                            <div class="crm-data-section">
+                                <div class="section-header">
+                                    <i class="fas fa-database"></i>
+                                    <h3>CRM Record Details</h3>
+                                </div>
+                                
+                                <div class="crm-preview">
+                                    <div class="crm-field">
+                                        <label>Company:</label>
+                                        <span>ABC Corporation Ltd.</span>
+                                        <i class="fas fa-check-circle" style="color: #28a745; margin-left: 8px;"></i>
+                                    </div>
+                                    <div class="crm-field">
+                                        <label>Registration:</label>
+                                        <span>201234567X</span>
+                                    </div>
+                                    <div class="crm-field">
+                                        <label>Letter Sender:</label>
+                                        <span>Ministry of Finance</span>
+                                    </div>
+                                    <div class="crm-field">
+                                        <label>Received Date:</label>
+                                        <span>15/10/2025</span>
+                                    </div>
+                                    <div class="crm-field">
+                                        <label>Scanned By:</label>
+                                        <span>CorpSec Staff (Auto)</span>
+                                    </div>
+                                    <div class="crm-field">
+                                        <label>CRM Record ID:</label>
+                                        <span class="record-id">#ML-2025-10-0156</span>
+                                    </div>
+                                    <div class="crm-field">
+                                        <label>Sync Status:</label>
+                                        <span class="sync-success">
+                                            <i class="fas fa-sync"></i> Synced at 09:44 AM
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="crm-actions-note">
+                                    <i class="fas fa-info-circle"></i>
+                                    <p>Record has been saved to CRM. Client notification and mail forwarding will be handled separately through CRM workflow.</p>
+                                </div>
+                            </div>
+
+                            <div class="action-options">
+                                <div class="option-card">
+                                    <div class="option-icon">
+                                        <i class="fas fa-file-image"></i>
+                                    </div>
+                                    <div class="option-info">
+                                        <h4>Attach Scan Image</h4>
+                                        <p>Upload scanned envelope to CRM</p>
+                                    </div>
+                                    <div class="option-toggle">
+                                        <input type="checkbox" id="attach" checked>
+                                        <label for="attach"></label>
+                                    </div>
+                                </div>
+
+                                <div class="option-card">
+                                    <div class="option-icon">
+                                        <i class="fas fa-archive"></i>
+                                    </div>
+                                    <div class="option-info">
+                                        <h4>Archive Locally</h4>
+                                        <p>Keep a local copy in app</p>
+                                    </div>
+                                    <div class="option-toggle">
+                                        <input type="checkbox" id="archive" checked>
+                                        <label for="archive"></label>
+                                    </div>
+                                </div>
+
+                                <div class="option-card">
+                                    <div class="option-icon">
+                                        <i class="fas fa-flag"></i>
+                                    </div>
+                                    <div class="option-info">
+                                        <h4>Mark as Urgent</h4>
+                                        <p>Flag for priority handling</p>
+                                    </div>
+                                    <div class="option-toggle">
+                                        <input type="checkbox" id="urgent">
+                                        <label for="urgent"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="final-actions">
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-edit"></i>
+                                    Edit Details
+                                </button>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-check"></i>
+                                    Complete & Next
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-label">Step 4: CRM Sync Complete</div>
+                
+                <!-- Explanation Panel -->
+                <div class="explanation-panel">
+                    <h4><i class="fas fa-info-circle"></i> Screen Explanation</h4>
+                    <div class="explanation-content">
+                        <div class="explain-item">
+                            <strong>✅ Success Message:</strong>
+                            <p>Xác nhận data đã được push lên CRM system thành công. Lúc này record đã tồn tại trong CRM.</p>
+                        </div>
+                        <div class="explain-item">
+                            <strong>📋 CRM Record Fields:</strong>
+                            <ul>
+                                <li><strong>Company:</strong> Tên công ty nhận thư (từ match result)</li>
+                                <li><strong>Registration:</strong> Mã đăng ký doanh nghiệp</li>
+                                <li><strong>Letter Sender:</strong> Người/tổ chức gửi thư</li>
+                                <li><strong>Received Date:</strong> Ngày nhận thư (từ OCR hoặc scan date)</li>
+                                <li><strong>Scanned By:</strong> Người thực hiện scan (Auto = app)</li>
+                                <li><strong>CRM Record ID:</strong> Mã unique của record trong CRM (#ML-YYYY-MM-XXXX)</li>
+                                <li><strong>Sync Status:</strong> Thời gian sync thành công</li>
+                            </ul>
+                        </div>
+                        <div class="explain-item">
+                            <strong>⚙️ Additional Options:</strong>
+                            <ul>
+                                <li><strong>Attach Scan Image:</strong> Upload ảnh bì thư (envelope) gốc lên CRM record</li>
+                                <li><strong>Archive Locally:</strong> Lưu copy ảnh bì thư trong app để offline access</li>
+                                <li><strong>Mark as Urgent:</strong> Flag record này là priority trong CRM</li>
+                            </ul>
+                        </div>
+                        <div class="explain-item">
+                            <strong>💡 Important Note:</strong>
+                            <p>Email notification & letter forwarding sẽ được xử lý riêng thông qua CRM workflow (không phải trong app này). CorpSec staff sẽ handle từ CRM interface.</p>
+                        </div>
+                        <div class="explain-item">
+                            <strong>🎯 Next Actions:</strong>
+                            <ul>
+                                <li><strong>Edit Details:</strong> Sửa thông tin nếu phát hiện sai sót</li>
+                                <li><strong>Complete & Next:</strong> Hoàn thành & quay về dashboard để scan bì thư tiếp theo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-controls">
+            <button class="control-btn" onclick="showScenario('exact')">
+                <i class="fas fa-check-circle"></i>
+                Exact Match
+            </button>
+            <button class="control-btn" onclick="showScenario('partial')">
+                <i class="fas fa-search"></i>
+                Partial Match
+            </button>
+            <button class="control-btn" onclick="showScenario('none')">
+                <i class="fas fa-times-circle"></i>
+                No Match
+            </button>
+            <button class="control-btn" onclick="animateFlow()">
+                <i class="fas fa-play"></i>
+                Animate Flow
+            </button>
+        </div>
+
+        <div class="features-overview">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-camera"></i>
+                    <h3>Smart Scanning</h3>
+                    <p>AI-powered OCR with multi-language support and auto-correction</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-database"></i>
+                    <h3>Database Matching</h3>
+                    <p>Intelligent matching with fuzzy search and similarity scoring</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Instant Processing</h3>
+                    <p>Real-time processing with sub-3-second response times</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure & Compliant</h3>
+                    <p>Enterprise-grade security with audit trails and compliance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
